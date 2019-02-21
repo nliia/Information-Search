@@ -1,5 +1,6 @@
 package com.nurullina;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -7,13 +8,11 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        MySpider spider = new MySpider();
+    public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter url (add the space after and then press enter)");
         String url = in.nextLine();
-        System.out.println("Enter the word for search");
-        String word = in.nextLine();
-        spider.search(url, word);
+        MySpider spider = new MySpider(url);
+        spider.getPageLinks(url);
     }
 }
