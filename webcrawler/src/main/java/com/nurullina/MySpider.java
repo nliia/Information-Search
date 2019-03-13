@@ -50,8 +50,9 @@ class MySpider {
                             e.printStackTrace();
                         }
                     });
-                    Set<String> uniquWords = new HashSet<>(wordsList);
-                    uniquWords.forEach(s -> {
+                    Set<String> uniqueWords = new HashSet<>(wordsList);
+//                    create file for each word and write doc number where it appears
+                    uniqueWords.forEach(s -> {
                         try (BufferedWriter wordWriter = new BufferedWriter(new FileWriter("words/" + s + ".txt", true))) {
                             wordWriter.write(docNum + "\n");
                         } catch (IOException e) {
