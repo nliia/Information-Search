@@ -14,7 +14,9 @@ public class Main {
 //        String url = in.nextLine();
 //        MySpider spider = new MySpider(url);
 //        spider.getPageLinks(url);
+//        TfIdfCounter tfIdfCounter = new TfIdfCounter(30);
+//        tfIdfCounter.getTfIdfForAllWords();
         TfIdfCounter tfIdfCounter = new TfIdfCounter(30);
-        tfIdfCounter.getTfIdfForAllWords();
+        tfIdfCounter.getBestMatch("access my account");
     }
 }
